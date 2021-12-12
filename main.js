@@ -1,6 +1,7 @@
 // SECTION constants
 const gridContainer = document.querySelector(".grid-container");
 const inputRange = document.getElementById("grid-size");
+const clearButton = document.getElementById("clear-button");
 
 // SECTION Variables
 let currentSize = document.getElementById("current-size");
@@ -33,11 +34,19 @@ const createGrid = function (gridSize = 16) {
 
 createGrid();
 
-// Get size from user
-inputRange.addEventListener("input", function () {
+// Get input from user and update grid.
+let updateRangeAndGrid = function () {
   gridContainer.innerHTML = "";
   createGrid(inputRange.value);
-
-  // Update displayed value
   currentSize.textContent = `${inputRange.value} x ${inputRange.value}`;
+};
+
+// Get size from user
+inputRange.addEventListener("input", function () {
+  updateRangeAndGrid();
+});
+
+// Clear grid
+clearButton.addEventListener("click", function () {
+  updateRangeAndGrid();
 });
