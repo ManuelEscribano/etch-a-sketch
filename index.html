@@ -19,6 +19,34 @@
         <img class="logo" src="./icons/odin.png" alt="" />
       </a>
     </header>
+    <section class="main-container">
+      <section class="button-container">
+        <div class="grid-colors">
+          <button>Black</button>
+          <button>Red</button>
+          <button>Green</button>
+          <button>Blue</button>
+          <button>Random</button>
+          <button>Erase</button>
+        </div>
+        <div class="modify-grid">
+          <button>Clear Grid</button>
+          <input
+            id="grid-size"
+            title="Choose a grid size"
+            type="range"
+            name="grid-size"
+            min="16"
+            max="64"
+            value="16"
+          />
+          <div class="display-size">
+            <p>Current grid size</p>
+            <p id="current-size">20 x 20</p>
+          </div>
+        </div>
+      </section>
+    </section>
     <script src="./main.js"></script>
   </body>
 </html>

@@ -21,3 +21,40 @@ header {
 h1 {
   font-size: 90px;
 }
+
+/* SECTION Main container. */
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button container */
+
+.button-container {
+  display: inherit;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.grid-colors {
+  display: inherit;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Modify grid */
+
+.modify-grid {
+  display: inherit;
+  flex-direction: inherit;
+  gap: 10px;
+}
+
+.display-size {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+}
