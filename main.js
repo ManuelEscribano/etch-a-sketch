@@ -1,7 +1,9 @@
 // SECTION constants
 const gridContainer = document.querySelector(".grid-container");
+const inputRange = document.getElementById("grid-size");
 
 // SECTION Variables
+let currentSize = document.getElementById("current-size");
 
 // Create grid with a default size of 16 x 16
 const createGrid = function (gridSize = 16) {
@@ -30,3 +32,12 @@ const createGrid = function (gridSize = 16) {
 };
 
 createGrid();
+
+// Get size from user
+inputRange.addEventListener("input", function () {
+  gridContainer.innerHTML = "";
+  createGrid(inputRange.value);
+
+  // Update displayed value
+  currentSize.textContent = `${inputRange.value} x ${inputRange.value}`;
+});
