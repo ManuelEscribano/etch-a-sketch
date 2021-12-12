@@ -63,18 +63,13 @@ h1 {
 
 .grid-container {
   display: flex;
-  /* justify-content: flex-start; */
 }
 
 .grid-element {
   display: inline-flex;
   align-items: flex-start;
   height: 700px;
-  width: 700px;
-}
-
-.row {
-  background-color: black;
+  width: 800px;
 }
 
 .box {

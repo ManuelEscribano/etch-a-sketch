@@ -21,7 +21,7 @@ const createGrid = function (gridSize = 16) {
     for (let i = 1; i <= gridSize; i++) {
       let boxElement = document.createElement("div");
       boxElement.style.height = `${700 / gridSize}px`;
-      boxElement.style.width = `${700 / gridSize}px`;
+      boxElement.style.width = `${800 / gridSize}px`;
       boxElement.className = "box";
       rowElement.appendChild(boxElement);
     }
