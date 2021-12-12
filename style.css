@@ -26,8 +26,8 @@ h1 {
 
 .main-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 40px;
 }
 
 /* Button container */
@@ -57,4 +57,26 @@ h1 {
   flex-direction: inherit;
   align-items: center;
   justify-content: center;
+}
+
+/* SECTION Grid container */
+
+.grid-container {
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+.grid-element {
+  display: inline-flex;
+  align-items: flex-start;
+  height: 700px;
+  width: 700px;
+}
+
+.row {
+  background-color: black;
+}
+
+.box {
+  background-color: black;
 }
