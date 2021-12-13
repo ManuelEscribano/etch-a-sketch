@@ -76,3 +76,23 @@ let generateRandomColor = function () {
   let number = (Math.random() * 0xfffff * 1000000).toString(16);
   return "#" + number.slice(0, 6);
 };
+
+// Add random color
+let addRandomColor = function (e) {
+  if (e.target.className === "box" && selectedColor === "random") {
+    e.target.style.backgroundColor = generateRandomColor();
+  }
+};
+
+// Add color
+let addColor = function (e) {
+  if (e.target.className === "box" && selectedColor) {
+    e.target.style.backgroundColor = `${selectedColor}`;
+  }
+};
+
+// Grid element.
+gridContainer.addEventListener("mouseover", function (e) {
+  addColor(e);
+  addRandomColor(e);
+});
