@@ -95,6 +95,53 @@ let addColor = function (e) {
 let eraseTarget = function (e) {
   if (e.target.className === "box" && selectedColor === "erase") {
     e.target.style.removeProperty("background-color");
+    e.target.style.removeProperty("opacity");
+  }
+};
+
+// Add opacity on hover.
+let addOpacity = function (e) {
+  if (e.target.className === "box" && selectedColor !== "erase") {
+    switch (e.target.style.opacity) {
+      case "":
+        e.target.style.opacity = "0.1";
+        break;
+
+      case "0.1":
+        e.target.style.opacity = "0.2";
+        break;
+
+      case "0.2":
+        e.target.style.opacity = "0.3";
+        break;
+
+      case "0.3":
+        e.target.style.opacity = "0.4";
+        break;
+      case "0.4":
+        e.target.style.opacity = "0.5";
+        break;
+
+      case "0.5":
+        e.target.style.opacity = "0.6";
+        break;
+
+      case "0.6":
+        e.target.style.opacity = "0.7";
+        break;
+
+      case "0.7":
+        e.target.style.opacity = "0.8";
+        break;
+
+      case "0.8":
+        e.target.style.opacity = "0.9";
+        break;
+
+      case "0.9":
+        e.target.style.opacity = "1";
+        break;
+    }
   }
 };
 
@@ -103,4 +150,5 @@ gridContainer.addEventListener("mouseover", function (e) {
   addColor(e);
   addRandomColor(e);
   eraseTarget(e);
+  addOpacity(e);
 });
