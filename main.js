@@ -66,3 +66,9 @@ colorBtns.forEach((button) => {
     toggleBtn(e);
   });
 });
+
+// Create random color
+let generateRandomColor = function () {
+  let number = (Math.random() * 0xfffff * 1000000).toString(16);
+  return "#" + number.slice(0, 6);
+};
