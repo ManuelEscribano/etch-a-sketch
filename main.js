@@ -91,8 +91,16 @@ let addColor = function (e) {
   }
 };
 
+// Erase target.
+let eraseTarget = function (e) {
+  if (e.target.className === "box" && selectedColor === "erase") {
+    e.target.style.removeProperty("background-color");
+  }
+};
+
 // Grid element.
 gridContainer.addEventListener("mouseover", function (e) {
   addColor(e);
   addRandomColor(e);
+  eraseTarget(e);
 });
