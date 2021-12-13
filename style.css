@@ -63,6 +63,9 @@ h1 {
 
 .grid-container {
   display: flex;
+
+  /* Test property */
+  border: 4px solid black;
 }
 
 .grid-element {

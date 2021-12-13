@@ -2,6 +2,7 @@
 const gridContainer = document.querySelector(".grid-container");
 const inputRange = document.getElementById("grid-size");
 const clearButton = document.getElementById("clear-button");
+const colorBtns = document.querySelectorAll(".color-btn");
 
 // SECTION Variables
 let currentSize = document.getElementById("current-size");
@@ -49,4 +50,19 @@ inputRange.addEventListener("input", function () {
 // Clear grid
 clearButton.addEventListener("click", function () {
   updateRangeAndGrid();
+});
+
+// Toggle active id on selected button.
+let toggleActiveId = function (e) {
+  for (let i = 0; i <= colorBtns.length; i++) {
+    colorBtns[i].removeAttribute("id");
+    e.target.id = "active";
+  }
+};
+
+// Apply eventListener to each color button.
+colorBtns.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    toggleBtn(e);
+  });
 });
