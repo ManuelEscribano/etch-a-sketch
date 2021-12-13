@@ -6,6 +6,7 @@ const colorBtns = document.querySelectorAll(".color-btn");
 
 // SECTION Variables
 let currentSize = document.getElementById("current-size");
+let selectedColor;
 
 // Create grid with a default size of 16 x 16
 const createGrid = function (gridSize = 16) {
@@ -57,13 +58,16 @@ let toggleActiveId = function (e) {
   for (let i = 0; i <= colorBtns.length; i++) {
     colorBtns[i].removeAttribute("id");
     e.target.id = "active";
+
+    // Store the selected color into variable.
+    selectedColor = e.target.classList[1];
   }
 };
 
 // Apply eventListener to each color button.
 colorBtns.forEach((button) => {
   button.addEventListener("click", function (e) {
-    toggleBtn(e);
+    toggleActiveId(e);
   });
 });
 
