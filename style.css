@@ -63,6 +63,7 @@ button {
   font-family: "Nunito Sans", sans-serif;
   letter-spacing: 2px;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 button#active {
